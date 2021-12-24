@@ -39,6 +39,7 @@ jobs:
           echo test, and deploy your project.
   docker:
     runs-on: self-hosted
+    needs: [build]
     steps:
       -
        name: Set up QEMU
