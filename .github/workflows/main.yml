@@ -40,8 +40,7 @@ jobs:
   docker:
     runs-on: self-hosted
     needs: [build]
-    env: DOCKER_USER:${{ secrets.DOCKERHUB_USERNAME }}
-         DOCKER_PASSWORD${{ secrets.DOCKERHUB_PASSWORD }}
+    
     steps:
       -
        name: Set up QEMU
