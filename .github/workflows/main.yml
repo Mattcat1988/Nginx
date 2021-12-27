@@ -47,8 +47,10 @@ jobs:
       - name: Login to Docker Hub
         uses: mr-smithers-excellent/docker-build-push@v5
         with:
-          image: mattcat1988/nginx:v2
+          image: mattcat1988/nginx
+          tags: v2
           registry: docker.io
+          dockerfile: Dockerfile
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
 
