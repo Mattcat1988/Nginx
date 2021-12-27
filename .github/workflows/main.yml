@@ -46,13 +46,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Login to Docker Hub
-        uses: mr-smithers-excellent/docker-build-push@v5
-        with:
-          image: mattcat1988/nginx:v2
-          registry: docker.io
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
-
-
+      - run: docker login
           
                   
