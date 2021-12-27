@@ -38,7 +38,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
   docker:
-    runs-on: ubuntu:latest
+    runs-on: self-hosted
     needs: [build]
     steps:
 
