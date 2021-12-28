@@ -69,3 +69,5 @@ jobs:
       - name: Check docker images
         run: docker images
                   
+      - name: check deploy server
+        run: ping 192.168.20.117
