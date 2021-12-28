@@ -69,5 +69,9 @@ jobs:
       - name: Check docker images
         run: docker images
                   
-      - name: check deploy server
-        run: ping -c 4 192.168.20.117
+  deploy:
+     runs-on: self-hosted
+     needs: [build, docker]
+     steps:
+       - name: chech deploy server
+         run: ping -c 4 192.168.20.117
