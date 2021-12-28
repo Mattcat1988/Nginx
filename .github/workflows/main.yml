@@ -76,4 +76,4 @@ jobs:
        - name: check deploy server
          run: ping -c 4 192.168.20.117
        - name: depoy
-         run: rsync -e "ssh -p 22 -i $HOME/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . index.html:/var/www/html
+         run: rsync -e "ssh -p 22 -i root/.ssh/key -o StrictHostKeyChecking=no" --archive --compress --delete . index.html:/var/www/html
