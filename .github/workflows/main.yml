@@ -75,3 +75,10 @@ jobs:
      steps:
        - name: check deploy server
          run: ping -c 4 192.168.20.117
+  deploy-ssh:
+    runs-on: self-hosted
+    needs: [build, docker, deploy]
+    steps:
+      - name: ssh connect
+        run: ssh vovka@192.168.20.117
+    
