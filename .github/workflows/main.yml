@@ -80,5 +80,5 @@ jobs:
     needs: [build, docker, deploy]
     steps:
       - name: ssh connect
-        run: ssh vovka@192.168.20.117
+        run: scp index.html root@192.168.20.117:/var/www/html/
     
