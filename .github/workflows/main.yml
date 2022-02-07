@@ -81,5 +81,3 @@ jobs:
     steps:
       - name: ssh connect
         run: scp index.html root@192.168.20.117:/var/www/html/
-      - name: run Dockerfile
-        run: ./docker.sh
